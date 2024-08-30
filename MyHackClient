@@ -1,0 +1,16 @@
+package com.example.myhackclient;
+
+import com.example.myhackclient.modules.ESPModule;
+import com.example.myhackclient.modules.FlyModule;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod("myhackclient")
+public class MyHackClient {
+
+    public MyHackClient() {
+        // ESP ve Fly modüllerini kaydediyoruz
+        MinecraftForge.EVENT_BUS.register(new ESPModule());
+        MinecraftForge.EVENT_BUS.register(new FlyModule());
+    }
+}
